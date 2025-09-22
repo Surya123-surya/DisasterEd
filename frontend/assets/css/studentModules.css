@@ -243,4 +243,74 @@ header  .login-button:hover{
     display: grid;
     grid-template-columns: repeat(1, minmax(250px, 1fr));
     gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lesson-container{
+    width: 100%;
+    /* background-color: #8E9C78; */
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.button-header{
+    width: 100%;
+    background-color: #8e9c78;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 1rem 1.5rem;
+    transition: background-color 0.3s ease;
+}
+.button-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.lesson-name{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+}
+.lesson-dropdown{
+    width: 20px;
+    float: right;
+    filter: invert(1);
+}
+.lesson-content{
+    padding: 1rem 1.5rem;
+    display: none;
+    background-color: #f9fafb;
+}
+.lesson-content h2{
+    margin-bottom: 1rem;
+    color: #1e293b;
+}
+.lesson-image{
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 0.5rem;
+}
+.img-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.img-content p{
+    font-size: 1.4rem;
+    color: #374456;
+}
+@media screen and (max-width: 768px) {
+    .img-content{
+        flex-direction: column;
+        text-align: center;
+    }
+    .lesson-image{
+        max-width: 100%;
+    }
 }

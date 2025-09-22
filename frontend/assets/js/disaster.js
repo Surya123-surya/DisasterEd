@@ -135,24 +135,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //virtual drills
 const drills = [
     {
@@ -223,6 +205,10 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+
 
 
 
