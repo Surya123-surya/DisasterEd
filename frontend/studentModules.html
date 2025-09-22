@@ -9,8 +9,8 @@
       <header>
         <a href="index.html"><img src="assets/images/logo.jpg" alt="DisastedEd" class="logo"></a>
         <nav class="navbar">
-            <a href="student.html" class="nav-title">Profile</a>
-            <a href="student.html" class="nav-title">Dashboard</a>
+            <a href="./student.html" class="nav-title">Profile</a>
+            <a href="./student.html" class="nav-title">Dashboard</a>
             <!-- <a href="#" class="nav-title">Disasters</a> -->
             <a href="#" class="nav-title">Emergency Contact</a>
         </nav>
@@ -32,9 +32,9 @@
                     <div class="progress-content">
                         <h3>Modules Completed</h3>
                         <div class="progress-stats">
-                            <span class="progress-number">1/2</span>
+                            <span class="progress-number">0/2</span>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: 50%"></div>
+                                <div class="progress-fill" style="width: 0%"></div>
                             </div>
                         </div>
                     </div>
@@ -45,8 +45,8 @@
                     <div class="progress-content">
                         <h3>Average Score</h3>
                         <div class="progress-stats">
-                            <span class="progress-number">92%</span>
-                            <p class="progress-note">Excellent progress!</p>
+                            <span class="progress-number">0%</span>
+                            <p class="progress-note">No progress!</p>
                         </div>
                     </div>
                 </div>
@@ -69,10 +69,12 @@
                     <button class="tab-btn" data-tab="drills">Quiz</button>
                 </div>
                 <div class="tab-content">
-                    <div id="modules-tab" class="tab-pane active"> 
+                    <div id="module1-tab" class="tab-pane active"> 
                         <!-- <h2>Module: 1</h2> -->
                         <div class="modules-grid" id="modules-grid">
                             <!-- Modules will be populated by JavaScript -->
+                             <!-- lesson 1 -->
+
                             <div class="lesson-container">
                                 <button class="button-header">
                                     <div class="button-content">
@@ -80,64 +82,648 @@
                                         <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
                                     </div>
                                 </button>
-
+                            <!--Lesson 1 body-->
                                 <div class="lesson-content">
                                     <h2>Introduction to Earthquakes</h2>
                                     <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-1.1.jpg" alt="Earthquake illustration" class="lesson-image">
                                      <p>
-                                         An <b>Earthquake</b> is the shaking of the surface of the Earth resulting from a sudden release of energy in the Earth's lithosphere. This energy release creates seismic waves that can cause damage to buildings, roads, and infrastructure.<br><br>
-                                     </p></div>
+                                         An earthquake is when the ground shakes suddenly. This happens because energy that was trapped inside the Earth is released all at once. The energy spreads as waves, which can make buildings, roads, and bridges shake or even break. That’s why earthquakes can sometimes cause big damage. It’s like the Earth is releasing its pressure in a very strong way.</p></div>
                                     
                                     <p>    
-                                         This energy release usually happens when blocks of rock slip past one another along a <b>fault</b>. The point inside the Earth where the earthquake originates is the <b>hypocenter</b> (or focus), and the point on the Earth's surface directly above it is the <b>epicenter</b>
-                                    </p>
-                                    <img src="./assets/images/earthquake_damage.jpg" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto; margin-bottom: 16px;">
-                                    <p>
-                                        Earthquakes can occur anywhere in the world, but some regions are more prone to them due to tectonic plate boundaries. Understanding earthquakes helps us prepare and respond effectively to minimize risks and stay safe.
-                                    </p>
+                                       Most earthquakes happen because large blocks of rock move and slide past each other along a crack in the Earth called a fault. The exact place deep inside the Earth where the earthquake begins is called the hypocenter (or focus). The spot on the ground directly above it is called the epicenter. The epicenter is usually where the shaking feels the strongest.
+                                    </p><br>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-1.2.jpeg" alt="Earthquake illustration" class="lesson-image">
+                                     <p>
+                                         Earthquakes can occur anywhere in the world, but they are more common in places where the Earth’s tectonic plates meet. These plates are always moving, and the stress between them leads to earthquakes. Learning about earthquakes is very important, because it helps people stay prepared and safe. By knowing what causes them, we can reduce risks and respond better when they happen.
+                                     </p></div>
                                     <ul>
-                                        <li>Earthquakes are measured using the Richter scale.</li>
+                                        <li> <b>Earthquake</b> are measured using the Richter scale.</li>
                                         <li>Most earthquakes are caused by movement along faults.</li>
-                                        <li>Preparedness and awareness are key to safety during an earthquake.</li>
+                                        <li>Being prepared and aware is the best way to stay safe during an earthquake.</li>
                                     </ul>
                                 </div>
                             </div>
+                            <!-- lesson 1 QUIZ -->
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 1</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What is the place inside the Earth where the earthquake starts called?</p>
+                                            <label><input type="radio" name="q1" value="epicenter"> Epicenter</label><br>
+                                            <label><input type="radio" name="q1" value="hypocenter"> Hypocenter (focus)</label><br>
+                                            <label><input type="radio" name="q1" value="fault"> Fault</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. Earthquakes are measured using which scale?</p>
+                                            <label><input type="radio" name="q2" value="richter"> Richter scale</label><br>
+                                            <label><input type="radio" name="q2" value="fahrenheit"> Fahrenheit scale</label><br>
+                                            <label><input type="radio" name="q2" value="barometer"> Barometer</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. What is the best way to stay safe during an earthquake?</p>
+                                            <label><input type="radio" name="q3" value="preparedness"> Being prepared and aware</label><br>
+                                            <label><input type="radio" name="q3" value="ignore"> Ignore warnings</label><br>
+                                            <label><input type="radio" name="q3" value="run"> Run outside immediately</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>      
+
+                        <!-- lesson 2 -->
                         <div class="modules-grid" id="modules-grid">
                             <!-- Modules will be populated by JavaScript -->
                             <div class="lesson-container">
                                 <button class="button-header">
                                     <div class="button-content">
-                                        <p class="lesson-name">Lesson 1: Introduction to Earthquake</p>
+                                        <p class="lesson-name">Lesson 2: Tectonics Plates and Faults</p>
                                         <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
                                     </div>
                                 </button>
+                          <!--Lesson 2 body-->
+                                <div class="lesson-content">
+                                    <h2>Tectonic plates and Faults</h2>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-2.1.png"  alt="Earthquake illustration" class="lesson-image" >
+                                     <p>
+                                        Hey, do you know the Earth’s surface is not one big piece? It’s actually made of huge pieces called tectonic plates. These plates are like giant puzzle pieces that fit together and cover the Earth. They are always moving, but very slowly, so we don’t feel it every day. Sometimes they push, pull, or slide against each other. When this happens, the Earth’s surface changes, and that’s when earthquakes often happen.<br><br>
+                                     </p></div>
+                                    
+                                    <!-- <p>    
+                                         This energy release usually happens when blocks of rock slip past one another along a <b>fault</b>. The point inside the Earth where the earthquake originates is the <b>hypocenter</b> (or focus), and the point on the Earth's surface directly above it is the <b>epicenter</b>
+                                    </p> -->
+                                    <div class="img-content">
+                                        <p>
+                                            There are three main ways these plates move. When they collide with each other, it’s called a convergent boundary, and it can even form mountains. When they move apart, it’s called a divergent boundary, and new land or ocean floor can appear. When they slide past each other sideways, it’s called a transform boundary, and this can cause sudden, strong earthquakes. These movements are super important for shaping the Earth.
+                                        </p>
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-2.2.jpeg" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto;   margin-bottom: 16px;">
+                                    </div>
+                                    <div class="img-content">
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-2.3.png" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto; margin-bottom: 16px;">
+                                    <p>
+                                        Now, let me tell you about faults. A fault is like a big crack in the Earth’s crust. When rocks on both sides of the crack move or slip, an earthquake happens. Imagine snapping a ruler—it suddenly breaks because of too much pressure. The same way, faults break or slip when there’s too much stress from the moving plates. That’s why earthquakes mostly happen near plate boundaries and faults.
+                                    </p>
+                                    </div>
+                                    <ul>
+                                        <li>Convergent boundaries: Where plates collide.</li>
+                                        <li>Divergent boundaries: Where plates move apart</li>
+                                        <li>Transform boundaries: Where plates slide horizontally past one another.</li>
+                                        <li>fault is a fracture in the Earth's crust where movement has occurred..</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <!--lesson 2 QUIZ-->
+                                 <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 2</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What are tectonic plates?</p>
+                                            <label><input type="radio" name="q1" value="mountains"> Mountains</label><br>
+                                            <label><input type="radio" name="q1" value="giant-pieces"> Giant pieces of Earth's crust</label><br>
+                                            <label><input type="radio" name="q1" value="clouds"> Clouds in the sky</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. What is a fault?</p>
+                                            <label><input type="radio" name="q2" value="river"> A river in the ground</label><br>
+                                            <label><input type="radio" name="q2" value="crack"> A crack in the Earth's crust</label><br>
+                                            <label><input type="radio" name="q2" value="mountain"> A mountain peak</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. Where do most earthquakes happen?</p>
+                                            <label><input type="radio" name="q3" value="plate-boundaries"> Near plate boundaries and faults</label><br>
+                                            <label><input type="radio" name="q3" value="deserts"> In deserts</label><br>
+                                            <label><input type="radio" name="q3" value="oceans"> Only in oceans</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                    
+                                </div>
+                           </div>
+                        </div> 
 
+
+                        <!-- lesson 3 -->
+                    
+                        <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Lesson 3: Types of Seismic waves</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                          <!--Lesson 3 body-->
+                                <div class="lesson-content">
+                                    <h2>Types of Seismic waves</h2>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-3.1.png"  alt="Earthquake illustration" class="lesson-image" >
+                                     <p>
+                                        When an earthquake happens, it sends out something called seismic waves. These are like ripples or vibrations that travel through the Earth. They are the reason we feel the ground shaking during an earthquake. Scientists study these waves to understand how strong the earthquake is and where it started. There are mainly two big groups: body waves and surface waves.<br><br>
+                                     </p></div>
+                                    
+                                   
+                                    <div class="img-content">
+                                        <p>
+                                            Body waves move through the inside of the Earth. There are two types here: P-waves and S-waves. P-waves (primary waves) are the fastest, and they can travel through solids, liquids, and gases. They push and pull the ground, kind of like how a slinky toy moves back and forth. S-waves (secondary waves) are slower, but they move the ground side to side or up and down, and they only travel through solids.
+                                        </p>
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-3.2.png" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto;   margin-bottom: 16px;">
+                                    </div>
+                                    <div class="img-content">
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-3.3.png" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto; margin-bottom: 16px;">
+                                    <p>
+                                        Then we have surface waves, which travel along the Earth’s surface. These waves are usually the ones that cause the most damage during an earthquake because they make the ground shake strongly. There are two types: Love waves, which shake the ground side to side, and Rayleigh waves, which make the ground move in a rolling motion like ocean waves. Even though they are slower than body waves, they are very destructive.
+                                    </p>
+                                    </div>
+                                    <ul>
+                                        <li>P-waves (Primary waves): The fastest waves; they compress and expand the ground in the direction of travel. They can travel through solids, liquids, and gases.
+</li>
+                                        <li>S-waves (Secondary waves):
+                                            Slower than P-waves; they move the ground up and down or side to side. They can only travel through solids.</li>
+                                        <li>Love waves: Cause horizontal, side-to-side shaking.</li>
+                                        <li>Rayleigh waves: Create a rolling, elliptical motion.</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <!--lesson 3 QUIZ-->
+                                 <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 3</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What are seismic waves?</p>
+                                            <label><input type="radio" name="q1" value="earthquake-waves"> Waves caused by earthquakes</label><br>
+                                            <label><input type="radio" name="q1" value="ocean-waves"> Waves in the ocean</label><br>
+                                            <label><input type="radio" name="q1" value="sound-waves"> Sound waves in the air</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. Which seismic wave is the fastest?</p>
+                                            <label><input type="radio" name="q2" value="p-wave"> P-wave (Primary wave)</label><br>
+                                            <label><input type="radio" name="q2" value="s-wave"> S-wave (Secondary wave)</label><br>
+                                            <label><input type="radio" name="q2" value="love-wave"> Love wave</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. Which seismic wave causes the most damage on the Earth's surface?</p>
+                                            <label><input type="radio" name="q3" value="surface-waves"> Surface waves (Love and Rayleigh waves)</label><br>
+                                            <label><input type="radio" name="q3" value="p-wave"> P-wave</label><br>
+                                            <label><input type="radio" name="q3" value="s-wave"> S-wave</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                    
+                                </div>
+                           </div>
+                        </div> 
+
+                        <!-- lesson 4 -->
+                         <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Lesson 4:  Measuring Earthquakes: Magnitude and Intensity</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                          <!--Lesson 4 body-->
+                                <div class="lesson-content">
+                                    <h2>Measuring Earthquakes: Magnitude and Intensity</h2>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-4.1.jpg"  alt="Earthquake illustration" class="lesson-image" >
+                                     <p>
+                                        When an earthquake happens, scientists measure it in two main ways: magnitude and intensity. Magnitude tells us how strong the earthquake really is at its source. It’s measured using special instruments called seismographs. The most common scale is the Richter scale, where each number means the quake is 10 times stronger than the one before it. For example, a magnitude 6 quake is much stronger than a magnitude 5.<br><br>
+                                     </p></div>
+                                    
+                                   
+                                    <div class="img-content">
+                                        <p>
+                                            On the other hand, intensity tells us how much shaking and damage people actually feel in different places. It does not stay the same everywhere, because some areas closer to the epicenter feel stronger shaking than areas farther away. Scientists use the Modified Mercalli Intensity (MMI) scale to describe intensity, which goes from I (not felt) to XII (total destruction). So, intensity is about the effect, while magnitude is about the energy.
+                                        </p>
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-4.2.jpg" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto;   margin-bottom: 16px;">
+                                    </div>
+                                    <div class="img-content">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LypTA-Unt0U?si=w2d374HsDIUsArD-&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" class="lesson-image" allowfullscreen></iframe>
+                                    <p>
+                                        You can think of it this way: if an earthquake is like a light bulb, then magnitude is how powerful the bulb is, and intensity is how bright the light looks to you depending on where you are standing. Both are important for understanding earthquakes. Magnitude tells us the true size of the quake, while intensity shows the real experience of people and places. Together, they help scientists and communities prepare better for future earthquakes.
+                                    </p>
+                                    </div>
+                                    <ul>
+                                        <li>P-waves (Primary waves): The fastest waves; they compress and expand the ground in the direction of travel. They can travel through solids, liquids, and gases.
+</li>
+                                        <li>S-waves (Secondary waves):
+                                            Slower than P-waves; they move the ground up and down or side to side. They can only travel through solids.</li>
+                                        <li>Love waves: Cause horizontal, side-to-side shaking.</li>
+                                        <li>Rayleigh waves: Create a rolling, elliptical motion.</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <!--lesson 4 QUIZ-->
+                                 <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 4</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What does the magnitude of an earthquake measure?</p>
+                                            <label><input type="radio" name="q1" value="energy"> The total energy released at the source</label><br>
+                                            <label><input type="radio" name="q1" value="damage"> The amount of damage caused</label><br>
+                                            <label><input type="radio" name="q1" value="distance"> The distance from the epicenter</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. Which scale is commonly used to measure earthquake magnitude?</p>
+                                            <label><input type="radio" name="q2" value="richter"> Richter scale</label><br>
+                                            <label><input type="radio" name="q2" value="mmi"> Modified Mercalli Intensity scale</label><br>
+                                            <label><input type="radio" name="q2" value="fahrenheit"> Fahrenheit scale</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. What does earthquake intensity describe?</p>
+                                            <label><input type="radio" name="q3" value="felt"> How much shaking and damage is felt at different locations</label><br>
+                                            <label><input type="radio" name="q3" value="energy"> The total energy released</label><br>
+                                            <label><input type="radio" name="q3" value="depth"> The depth of the earthquake</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                    
+                                </div>
+                           </div>
+                        </div> 
+                        <!-- Module 1 Submit Button -->
+                        <div style="text-align:center; margin: 32px 0;">
+                            <button id="module1-submit-btn" class="quiz-submit-btn" style="padding: 12px 32px; font-size: 1.1em; background-color: #8e9c78;">Submit Module 1</button>
+                            <div id="module1-submit-feedback" style="margin-top:10px; color:#8e9c78;"></div>
+                        </div>
+
+                    </div>
+                    <!-- module 2 -->
+                     <div id="module2-tab" class="tab-pane "> 
+                        <!-- <h2>Module: 1</h2> -->
+                        <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->
+                             <!-- lesson 1 -->
+
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Lesson 4:  Preparedness: Before an Earthquake</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                            <!--Lesson 1 body-->
                                 <div class="lesson-content">
                                     <h2>Introduction to Earthquakes</h2>
                                     <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-1.1.jpg" alt="Earthquake illustration" class="lesson-image">
                                      <p>
-                                         An <b>Earthquake</b> is the shaking of the surface of the Earth resulting from a sudden release of energy in the Earth's lithosphere. This energy release creates seismic waves that can cause damage to buildings, roads, and infrastructure.<br><br>
-                                     </p></div>
+                                         An earthquake is when the ground shakes suddenly. This happens because energy that was trapped inside the Earth is released all at once. The energy spreads as waves, which can make buildings, roads, and bridges shake or even break. That’s why earthquakes can sometimes cause big damage. It’s like the Earth is releasing its pressure in a very strong way.</p></div>
                                     
                                     <p>    
-                                         This energy release usually happens when blocks of rock slip past one another along a <b>fault</b>. The point inside the Earth where the earthquake originates is the <b>hypocenter</b> (or focus), and the point on the Earth's surface directly above it is the <b>epicenter</b>
-                                    </p>
-                                    <img src="./assets/images/earthquake_damage.jpg" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto; margin-bottom: 16px;">
-                                    <p>
-                                        Earthquakes can occur anywhere in the world, but some regions are more prone to them due to tectonic plate boundaries. Understanding earthquakes helps us prepare and respond effectively to minimize risks and stay safe.
-                                    </p>
+                                       Most earthquakes happen because large blocks of rock move and slide past each other along a crack in the Earth called a fault. The exact place deep inside the Earth where the earthquake begins is called the hypocenter (or focus). The spot on the ground directly above it is called the epicenter. The epicenter is usually where the shaking feels the strongest.
+                                    </p><br>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-1.2.jpeg" alt="Earthquake illustration" class="lesson-image">
+                                     <p>
+                                         Earthquakes can occur anywhere in the world, but they are more common in places where the Earth’s tectonic plates meet. These plates are always moving, and the stress between them leads to earthquakes. Learning about earthquakes is very important, because it helps people stay prepared and safe. By knowing what causes them, we can reduce risks and respond better when they happen.
+                                     </p></div>
                                     <ul>
-                                        <li>Earthquakes are measured using the Richter scale.</li>
+                                        <li> <b>Earthquake</b> are measured using the Richter scale.</li>
                                         <li>Most earthquakes are caused by movement along faults.</li>
-                                        <li>Preparedness and awareness are key to safety during an earthquake.</li>
+                                        <li>Being prepared and aware is the best way to stay safe during an earthquake.</li>
                                     </ul>
                                 </div>
                             </div>
+                            <!-- lesson 1 QUIZ -->
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 1</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What is the place inside the Earth where the earthquake starts called?</p>
+                                            <label><input type="radio" name="q1" value="epicenter"> Epicenter</label><br>
+                                            <label><input type="radio" name="q1" value="hypocenter"> Hypocenter (focus)</label><br>
+                                            <label><input type="radio" name="q1" value="fault"> Fault</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. Earthquakes are measured using which scale?</p>
+                                            <label><input type="radio" name="q2" value="richter"> Richter scale</label><br>
+                                            <label><input type="radio" name="q2" value="fahrenheit"> Fahrenheit scale</label><br>
+                                            <label><input type="radio" name="q2" value="barometer"> Barometer</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. What is the best way to stay safe during an earthquake?</p>
+                                            <label><input type="radio" name="q3" value="preparedness"> Being prepared and aware</label><br>
+                                            <label><input type="radio" name="q3" value="ignore"> Ignore warnings</label><br>
+                                            <label><input type="radio" name="q3" value="run"> Run outside immediately</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                </div>
+                            </div>
                         </div>      
+
+                        <!-- lesson 2 -->
+                        <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Lesson 2: Tectonics Plates and Faults</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                          <!--Lesson 2 body-->
+                                <div class="lesson-content">
+                                    <h2>Tectonic plates and Faults</h2>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-2.1.png"  alt="Earthquake illustration" class="lesson-image" >
+                                     <p>
+                                        Hey, do you know the Earth’s surface is not one big piece? It’s actually made of huge pieces called tectonic plates. These plates are like giant puzzle pieces that fit together and cover the Earth. They are always moving, but very slowly, so we don’t feel it every day. Sometimes they push, pull, or slide against each other. When this happens, the Earth’s surface changes, and that’s when earthquakes often happen.<br><br>
+                                     </p></div>
+                                    
+                                    <!-- <p>    
+                                         This energy release usually happens when blocks of rock slip past one another along a <b>fault</b>. The point inside the Earth where the earthquake originates is the <b>hypocenter</b> (or focus), and the point on the Earth's surface directly above it is the <b>epicenter</b>
+                                    </p> -->
+                                    <div class="img-content">
+                                        <p>
+                                            There are three main ways these plates move. When they collide with each other, it’s called a convergent boundary, and it can even form mountains. When they move apart, it’s called a divergent boundary, and new land or ocean floor can appear. When they slide past each other sideways, it’s called a transform boundary, and this can cause sudden, strong earthquakes. These movements are super important for shaping the Earth.
+                                        </p>
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-2.2.jpeg" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto;   margin-bottom: 16px;">
+                                    </div>
+                                    <div class="img-content">
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-2.3.png" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto; margin-bottom: 16px;">
+                                    <p>
+                                        Now, let me tell you about faults. A fault is like a big crack in the Earth’s crust. When rocks on both sides of the crack move or slip, an earthquake happens. Imagine snapping a ruler—it suddenly breaks because of too much pressure. The same way, faults break or slip when there’s too much stress from the moving plates. That’s why earthquakes mostly happen near plate boundaries and faults.
+                                    </p>
+                                    </div>
+                                    <ul>
+                                        <li>Convergent boundaries: Where plates collide.</li>
+                                        <li>Divergent boundaries: Where plates move apart</li>
+                                        <li>Transform boundaries: Where plates slide horizontally past one another.</li>
+                                        <li>fault is a fracture in the Earth's crust where movement has occurred..</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <!--lesson 2 QUIZ-->
+                                 <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 2</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What are tectonic plates?</p>
+                                            <label><input type="radio" name="q1" value="mountains"> Mountains</label><br>
+                                            <label><input type="radio" name="q1" value="giant-pieces"> Giant pieces of Earth's crust</label><br>
+                                            <label><input type="radio" name="q1" value="clouds"> Clouds in the sky</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. What is a fault?</p>
+                                            <label><input type="radio" name="q2" value="river"> A river in the ground</label><br>
+                                            <label><input type="radio" name="q2" value="crack"> A crack in the Earth's crust</label><br>
+                                            <label><input type="radio" name="q2" value="mountain"> A mountain peak</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. Where do most earthquakes happen?</p>
+                                            <label><input type="radio" name="q3" value="plate-boundaries"> Near plate boundaries and faults</label><br>
+                                            <label><input type="radio" name="q3" value="deserts"> In deserts</label><br>
+                                            <label><input type="radio" name="q3" value="oceans"> Only in oceans</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                    
+                                </div>
+                           </div>
+                        </div> 
+
+
+                        <!-- lesson 3 -->
+                    
+                        <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Lesson 3: Types of Seismic waves</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                          <!--Lesson 3 body-->
+                                <div class="lesson-content">
+                                    <h2>Types of Seismic waves</h2>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-3.1.png"  alt="Earthquake illustration" class="lesson-image" >
+                                     <p>
+                                        When an earthquake happens, it sends out something called seismic waves. These are like ripples or vibrations that travel through the Earth. They are the reason we feel the ground shaking during an earthquake. Scientists study these waves to understand how strong the earthquake is and where it started. There are mainly two big groups: body waves and surface waves.<br><br>
+                                     </p></div>
+                                    
+                                   
+                                    <div class="img-content">
+                                        <p>
+                                            Body waves move through the inside of the Earth. There are two types here: P-waves and S-waves. P-waves (primary waves) are the fastest, and they can travel through solids, liquids, and gases. They push and pull the ground, kind of like how a slinky toy moves back and forth. S-waves (secondary waves) are slower, but they move the ground side to side or up and down, and they only travel through solids.
+                                        </p>
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-3.2.png" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto;   margin-bottom: 16px;">
+                                    </div>
+                                    <div class="img-content">
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-3.3.png" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto; margin-bottom: 16px;">
+                                    <p>
+                                        Then we have surface waves, which travel along the Earth’s surface. These waves are usually the ones that cause the most damage during an earthquake because they make the ground shake strongly. There are two types: Love waves, which shake the ground side to side, and Rayleigh waves, which make the ground move in a rolling motion like ocean waves. Even though they are slower than body waves, they are very destructive.
+                                    </p>
+                                    </div>
+                                    <ul>
+                                        <li>P-waves (Primary waves): The fastest waves; they compress and expand the ground in the direction of travel. They can travel through solids, liquids, and gases.
+</li>
+                                        <li>S-waves (Secondary waves):
+                                            Slower than P-waves; they move the ground up and down or side to side. They can only travel through solids.</li>
+                                        <li>Love waves: Cause horizontal, side-to-side shaking.</li>
+                                        <li>Rayleigh waves: Create a rolling, elliptical motion.</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <!--lesson 3 QUIZ-->
+                                 <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 3</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What are seismic waves?</p>
+                                            <label><input type="radio" name="q1" value="earthquake-waves"> Waves caused by earthquakes</label><br>
+                                            <label><input type="radio" name="q1" value="ocean-waves"> Waves in the ocean</label><br>
+                                            <label><input type="radio" name="q1" value="sound-waves"> Sound waves in the air</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. Which seismic wave is the fastest?</p>
+                                            <label><input type="radio" name="q2" value="p-wave"> P-wave (Primary wave)</label><br>
+                                            <label><input type="radio" name="q2" value="s-wave"> S-wave (Secondary wave)</label><br>
+                                            <label><input type="radio" name="q2" value="love-wave"> Love wave</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. Which seismic wave causes the most damage on the Earth's surface?</p>
+                                            <label><input type="radio" name="q3" value="surface-waves"> Surface waves (Love and Rayleigh waves)</label><br>
+                                            <label><input type="radio" name="q3" value="p-wave"> P-wave</label><br>
+                                            <label><input type="radio" name="q3" value="s-wave"> S-wave</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                    
+                                </div>
+                           </div>
+                        </div> 
+
+                        <!-- lesson 4 -->
+                         <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->
+                            <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Lesson 4:  Measuring Earthquakes: Magnitude and Intensity</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                          <!--Lesson 4 body-->
+                                <div class="lesson-content">
+                                    <h2>Measuring Earthquakes: Magnitude and Intensity</h2>
+                                    <div class="img-content"> <img src="./assets/images/earthquakeModule/earthquakeLesson-4.1.jpg"  alt="Earthquake illustration" class="lesson-image" >
+                                     <p>
+                                        When an earthquake happens, scientists measure it in two main ways: magnitude and intensity. Magnitude tells us how strong the earthquake really is at its source. It’s measured using special instruments called seismographs. The most common scale is the Richter scale, where each number means the quake is 10 times stronger than the one before it. For example, a magnitude 6 quake is much stronger than a magnitude 5.<br><br>
+                                     </p></div>
+                                    
+                                   
+                                    <div class="img-content">
+                                        <p>
+                                            On the other hand, intensity tells us how much shaking and damage people actually feel in different places. It does not stay the same everywhere, because some areas closer to the epicenter feel stronger shaking than areas farther away. Scientists use the Modified Mercalli Intensity (MMI) scale to describe intensity, which goes from I (not felt) to XII (total destruction). So, intensity is about the effect, while magnitude is about the energy.
+                                        </p>
+                                        <img src="./assets/images/earthquakeModule/earthquakeLesson-4.2.jpg" alt="Earthquake damage" class="lesson-image" style="max-width: 100%; height: auto;   margin-bottom: 16px;">
+                                    </div>
+                                    <div class="img-content">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LypTA-Unt0U?si=w2d374HsDIUsArD-&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" class="lesson-image" allowfullscreen></iframe>
+                                    <p>
+                                        You can think of it this way: if an earthquake is like a light bulb, then magnitude is how powerful the bulb is, and intensity is how bright the light looks to you depending on where you are standing. Both are important for understanding earthquakes. Magnitude tells us the true size of the quake, while intensity shows the real experience of people and places. Together, they help scientists and communities prepare better for future earthquakes.
+                                    </p>
+                                    </div>
+                                    <ul>
+                                        <li>P-waves (Primary waves): The fastest waves; they compress and expand the ground in the direction of travel. They can travel through solids, liquids, and gases.
+</li>
+                                        <li>S-waves (Secondary waves):
+                                            Slower than P-waves; they move the ground up and down or side to side. They can only travel through solids.</li>
+                                        <li>Love waves: Cause horizontal, side-to-side shaking.</li>
+                                        <li>Rayleigh waves: Create a rolling, elliptical motion.</li>
+                                    </ul>
+                                </div>
+                                </div>
+                                <!--lesson 4 QUIZ-->
+                                 <div class="lesson-container">
+                                <button class="button-header">
+                                    <div class="button-content">
+                                        <p class="lesson-name">Quiz: 4</p>
+                                        <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
+                                    </div>
+                                </button>
+                                <div class="lesson-content">
+                                    <form id="earthquake-quiz">
+                                        <div class="quiz-question" id="q1-container">
+                                            <p>1. What does the magnitude of an earthquake measure?</p>
+                                            <label><input type="radio" name="q1" value="energy"> The total energy released at the source</label><br>
+                                            <label><input type="radio" name="q1" value="damage"> The amount of damage caused</label><br>
+                                            <label><input type="radio" name="q1" value="distance"> The distance from the epicenter</label>
+                                            <div class="quiz-feedback" id="q1-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q2-container">
+                                            <p>2. Which scale is commonly used to measure earthquake magnitude?</p>
+                                            <label><input type="radio" name="q2" value="richter"> Richter scale</label><br>
+                                            <label><input type="radio" name="q2" value="mmi"> Modified Mercalli Intensity scale</label><br>
+                                            <label><input type="radio" name="q2" value="fahrenheit"> Fahrenheit scale</label>
+                                            <div class="quiz-feedback" id="q2-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <div class="quiz-question" id="q3-container">
+                                            <p>3. What does earthquake intensity describe?</p>
+                                            <label><input type="radio" name="q3" value="felt"> How much shaking and damage is felt at different locations</label><br>
+                                            <label><input type="radio" name="q3" value="energy"> The total energy released</label><br>
+                                            <label><input type="radio" name="q3" value="depth"> The depth of the earthquake</label>
+                                            <div class="quiz-feedback" id="q3-feedback" style="color:red;display:none;"></div>
+                                        </div>
+                                        <button type="button" id="submit-quiz" class="quiz-submit-btn">Submit Quiz</button>
+                                        <div id="quiz-result" style="margin-top:10px;"></div>
+                                    </form>
+                                    
+                                </div>
+                           </div>
+                        </div> 
+                         <div style="text-align:center; margin: 32px 0;">
+                            <button id="module1-submit-btn" class="quiz-submit-btn" style="padding: 12px 32px; font-size: 1.1em; background-color: #8e9c78;">Submit Module 1</button>
+                            <div id="module1-submit-feedback" style="margin-top:10px; color:#8e9c78;"></div>
+                        </div>
+                        
+
                     </div>
+
+                    <!-- QUIZ -->
+                     <div id="quiz-tab" class="tab-pane">
+                        <h3>Overall QUIZ</h3>
+                        <div class="quiz-container" id="quiz-container">
+                            <!-- Drills will be populated by JavaScript -->
+                        </div>
+                    </div>
+
                 </div>
              </div>    
+
+
+
 
          <script src="./assets/js/modules.js"></script>
 </body>

@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const validCreds = credentials[userType];
         if (validCreds && username === validCreds.username && password === validCreds.password) {
-            msg.style.color = "green";
+            msg.style.color = "#000000ff";
             msg.textContent = "Login successful! Redirecting...";
             setTimeout(() => {
                 if (userType === "Student") {
