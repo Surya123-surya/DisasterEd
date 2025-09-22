@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-DisasterEd</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h2>LOGIN</h2>
+            <p>Continue your journey!!</p>
+            <form action="/login" method="post">
+                <select class="user">
+                    <option value="none">Choose User Type</option>
+                    <option value="Student">Student</option>
+                    <option value="Student">Adminstrator</option>
+                </select>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+                <br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Not registered? <a href="./signup.html">Create an account</a></p>
+        </div>
+    </section>
+<script src="./assets/js/login.js"></script>
+</body>
+</html>

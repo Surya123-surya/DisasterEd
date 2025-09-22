@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DsasterEd-StudentPortal</title>
+    <link rel="stylesheet" href="./assets/css/student.css">
+    
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/images/logo.jpg" alt="DisastedEd" class="logo"></a>
+        <nav class="navbar">
+            <a href="index.html" class="nav-title">Profile</a>
+            <a href="#" class="nav-title">Dashboard</a>
+            <!-- <a href="#" class="nav-title">Disasters</a> -->
+            <a href="#" class="nav-title">Emergency Contact</a>
+        </nav>
+       <a href="./login.html"><button class="login-button">Logout</button></a> 
+    </header>
+    <div class="student-main">
+        <div class="dashboard-container">
+         
+             <div class="dashboard-header">
+                <h1>Student Dashboard</h1>
+                <p>Welcome back, <span id="student-name"></span>!</p>
+                <p class="subtitle">Continue your disaster preparedness journey</p>
+             </div>
+
+            <!--Student progress grid-->
+             <div class="progress-grid">
+                <div class="progress-card">
+                    <img src="./assets/images/studenticons/open-book_578666.png" class="student-icon" alt="open-book">
+                    <div class="progress-content">
+                        <h3>Modules Completed</h3>
+                        <div class="progress-stats">
+                            <span class="progress-number">12/15</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+                <div class="progress-card">
+                     <img src="./assets/images/studenticons/grades.png" class="student-icon" alt="open-book">
+                    <div class="progress-content">
+                        <h3>Average Score</h3>
+                        <div class="progress-stats">
+                            <span class="progress-number">92%</span>
+                            <p class="progress-note">Excellent progress!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-card">
+                    <img src="./assets/images/studenticons/circle_5967818.png" class="student-icon" alt="open-book">
+                    <div class="progress-content">
+                        <h3>Drills Attended</h3>
+                        <div class="progress-stats">
+                            <span class="progress-number">8</span>
+                            <p class="progress-note">2 scheduled</p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+           
+            <!--Student tab-->
+            
+            <div class="student-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="modules">Education Modules</button>
+                    <button class="tab-btn " data-tab="alerts">Regional Alerts</button>
+                    <button class="tab-btn" data-tab="drills">Virtual Drills</button>
+                </div>
+                
+                <div class="tab-content">
+                    <!-- Modules Tab -->
+                    <div id="modules-tab" class="tab-pane active">
+                        <h3>Interactive Learning Modules</h3>
+                        <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Alerts Tab -->
+                    <div id="alerts-tab" class="tab-pane">
+                        <h3>Region-Specific Alerts</h3>
+                        <div class="alerts-container" id="alerts-container">
+                            <!-- Alerts will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <!-- Drills Tab -->
+                    <div id="drills-tab" class="tab-pane">
+                        <h3>Virtual Emergency Drills</h3>
+                        <div class="drills-container" id="drills-container">
+                            <!-- Drills will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>  
+          
+            </div>
+        
+        
+        </div>
+    </div>
+<script src="./assets/js/disaster.js"></script>
+</body>
+</html>

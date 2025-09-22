@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+/* container for header , vision , footer */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+header{
+    width: 100vw;
+    height: 4rem;
+    padding: 45px 60px;
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header .logo{
+  width: 5.9rem;
+}
+
+header .navbar{
+    width: 28%;
+    height: 4rem;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 2rem;
+    position: fixed;
+    z-index: 2;
+    left:37%;    /* center the navbar */
+    backdrop-filter: blur(10px);
+}
+
+header .navbar .nav-title{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5s;
+    color:black;
+    font-family: 'Poppins', sans-serif;
+   
+}
+header .navbar .nav-title:hover{
+    transform: scale(1.05);
+    padding: 10px;
+}   
+header .navbar .nav-title:hover{
+   color: rgba(0,0,0,0.5);
+}
+header .login-button{
+    width: 130px;
+    color: white;
+    height: 55px;
+    background-color:#5a6447;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+header  .login-button:hover{
+    background-color: rgb(142, 156, 120);
+    box-shadow: 5px 5px 5px 1px rgb(0, 0, 0,0.1);
+    transform: scale(1.05);
+}
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.hero-content
+/* common button properties*/
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    gap: 0.5rem;
+}
+.btn-primary {
+    background-color: #7e8c69;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #445033;
+    /* transform: translateY(-1px); */
+}
+/* .btn-secondary {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #d97706;
+} */
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #445033;
+}
+
+.btn-outline:hover {
+    background-color: #445033;
+    border-color: #445033;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+.btn-full {
+    width: 100%;
+}
+/* Vision Section */
+.vision {
+    padding: 80px 0;
+}
+/*
+.vision-container{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vision-header{
+    width: 50%;
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 50px;
+    background-color: #3d482c;
+}
+.vision-img{
+   width:15rem;
+    object-fit:contain;
+}
+    */
+/* #vision-img1{
+    border-top-left-radius:100% ;
+}
+#vision-img2{
+    border-top-right-radius:100% ;
+}
+#vision-img3{
+    border-bottom-left-radius:100% ;
+}
+#vision-img4{
+    border-bottom-right-radius:100% ;
+}  
+
+.vision-container{
+    width:auto;
+    padding: 0 150px;
+    position:relative;
+}
+.vision-hero{
+    width:100%;
+    background-color: #3d482c;
+    text-align: center;
+}
+.vision-hero .vision-img{
+    width:35%;
+    height: 300px;
+}
+.vision-container::before{
+    background-color: rgb(0, 0, 0);
+    width: 50%;
+    position: absolute;
+    top:100px;
+    content: " ";
+}
+
+.vision-container::after{
+    background-color: #ffffff;
+    width: 34%;
+    height:50%;
+    position: absolute ;
+    color:white;
+    top:25%;
+    left:33%;
+    border-radius: 50%;
+    content: " ";
+}
+ */
+ .vision-image-contianer{
+    text-align: center;
+ }
+.vision-image{
+   width: 60%;
+}
+/*Disaster Section*/
+.disaster {
+    padding: 40px 0;
+}
+.disaster-header{
+    margin-bottom: 4rem;
+    padding: 0 50px;
+    text-align: center;
+}
+.disaster-header h2{
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+}
+.disaster-header p{
+    font-size: 1.2rem;
+}
+/*Disaster grid*/
+
+.disaster-grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.disaster-box{
+    width: 70%;
+    height: 10rem;
+    display: flex;
+    align-items:center;
+    /* justify-content: space-between; */
+    padding: 10px;
+    background-color: transparent;
+    margin-bottom:1.5rem;
+    border-radius: 2rem;
+    transition: all 0.5s ease;
+    color: black;
+    background-color: #f3f6f086;
+}
+.disaster-content{
+   padding: 0 10rem;
+   text-align: center;
+}
+.disaster-content p{
+    color:#f3f6f086;
+}
+.disaster-box:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px 5px 1px rgb(0, 0, 0,0.1);
+    background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%);
+    color: white;
+}
+
+.disaster-box img{
+object-fit: cover;
+height: 8rem;
+margin-left: 1rem;
+border-radius: 1rem;
+}
+footer{
+    background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%);
+    width: 100%;
+    padding: 2rem 8rem;
+}
+footer .contact-us {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+    
+}
+footer .contact-us h3{
+   font-size: 2rem;
+}
+.contact-us .icons-section{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.contact-us .icons-section img{
+    width:2rem;
+    margin: 2rem;
+}
+
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisasterEd</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/images/logo.jpg" alt="DisastedEd" class="logo"></a>
+        <nav class="navbar">
+            <a href="index.html" class="nav-title">Home</a>
+            <a href="#" class="nav-title">About us</a>
+            <a href="#" class="nav-title">Disasters</a>
+            <a href="#" class="nav-title">Contact us</a>
+        </nav>
+       <a href="./login.html"><button class="login-button">Login/SignUp</button></a> 
+    </header>
+
+    <div class="main-content">
+        <div class="home-page">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1>Disaster Preparedness & Response Education</h1>
+                        <p>Empowering students and institutions with comprehensive disaster education, interactive training, and real-time alerts to build resilient communities.</p>
+                        <div class="hero-buttons">
+                           <a href="./login.html"> <button class="btn btn-primary btn-large" id="hero-login-btn">Get Started</button></a> 
+                            <a><button class="btn btn-outline btn-large" onclick="scrollToSection('vision')">Learn More</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Vision Section -->
+            <section class="vision" id="vision">
+                <!-- <div class="vision-container">
+                     <div class="vision-header">
+                        <h2>Our Vision</h2>
+                        <p>To create a world where every individual is prepared to respond effectively to disasters, minimizing loss of life and property through comprehensive education and training.</p>
+                    </div> 
+                    <div class="vision-hero" id="image-space">
+                        <img id="vision-img1" class="vision-img" src="assets/images/vision-image.jpeg" alt="Vision">
+                        <img  id="vision-img2" class="vision-img" src="assets/images/vision-image2.png" alt="Vision">
+                        <img  id="vision-img3" class="vision-img" src="assets/images/vision-image3.png" alt="Vision">
+                        <img  id="vision-img4" class="vision-img" src="assets/images/vision-image4.png" alt="Vision">
+                    </div>
+                </div> -->
+                <div class="vision-image-contianer">
+                    <img src="./assets/images/Our Vision.png" alt="vision" class="vision-image">
+                </div>
+            </section>
+            <!--Disaster Section-->
+            <section class="disaster">
+               <div class="disaster-container">
+                   <div class="disaster-header">
+                       <h2>Major Disasters that may occur</h2>
+                       <p>Comprehensive coverage of natural and man-made disasters with detailed preparation and response strategies.</p>
+                    </div>
+                    <div class="disaster-grid">
+                        <div class="disaster-box" id="earthquake">
+                            <img src="./assets/images/earthquake.jpeg" alt="earthquakes">
+                           <div class="disaster-content">
+                            <h3>Eathquakes</h3>
+                            <p>  Caused by sudden movement of tectonic plates under the earth’s crust.<br>Can lead to building collapse, ground rupture, and loss of life
+                            </p></div> 
+                        </div>
+                        <div class="disaster-box" id="floods">
+                            <div class="disaster-content">
+                                <h3>Floods</h3>
+                                <p>Occur due to heavy rainfall, dam failure, or river overflow.<br>Damage to agriculture, homes, and infrastructure.<br>Can spread waterborne diseases.
+                                </p></div> 
+                                <img src="./assets/images/floods.jpeg" alt="floods">
+                        </div>
+                        <div class="disaster-box" id="fires">
+                            <img src="./assets/images/wildfire.jpg" alt="fires">
+                            <div class="disaster-content">
+                                <h3>Fires</h3>
+                                <p>Can be natural (lightning, volcanic activity) or man-made (electrical faults, negligence).<br>Spread quickly and cause loss of life, property, and forest cover.<br>Release toxic gases, reducing air quality.
+                                </p></div> 
+                        </div>
+                        <div class="disaster-box" id="landslides">
+                            <div class="disaster-content">
+                                <h3>Landslides</h3>
+                                <p>Movement of rock, soil, or debris down a slope due to rainfall, earthquakes, or human activities.<br>Block roads, rivers, and damage settlements.<br>Can trigger secondary disasters like floods.
+                                </p></div> 
+                                <img src="./assets/images/landslides.jpg" alt="landslides">
+                        </div>
+                        <div class="disaster-box" id="cyclones">
+                            <img src="./assets/images/cyclones.jpg" alt="cyclones">
+                            <div class="disaster-content">
+                                <h3>Cyclones</h3>
+                                <p>Intense tropical storms with strong winds and heavy rainfall.<br>Cause flooding, storm surges, and damage to infrastructure.<br>Long-term effects include loss of livelihood and displacement.
+                                </p></div> 
+                        </div>
+                        <div class="disaster-box" id="tsunamis">
+                            <div class="disaster-content">
+                                <h3>Tsunami</h3>
+                                <p>Giant sea waves caused by undersea earthquakes, volcanic eruptions, or landslides.<br>Inundate coastal areas, causing massive destruction and loss of life.<br>Secondary impacts: saltwater intrusion, contamination of drinking water.
+                                </p></div> 
+                                <img src="./assets/images/tsunami.jpg" alt="tsunamis">
+                        </div>
+                    </div>
+                 </div>
+            </section>
+            <!--Contact section-->
+            <footer>
+                <div class="contact-us">
+                    <h3>Contact-us</h3>
+                    <div class="icons-section">
+                       <div class="icons">
+                        <img src="./assets/images/ContactIcons/location.png" alt="Location">
+                        <p>Visakhapatnam</p>
+                       </div>
+                       <div class="icons">
+                        <img src="./assets/images/ContactIcons/mail.png" alt="Email">
+                        <p>disasteded.edu.in</p>
+                       </div>
+                       <div class="icons">
+                        <img src="./assets/images/ContactIcons/linkedin.png" alt="linkedin">
+                        <p>DisasterEd-linkedin.com</p>
+                       </div>
+                       <div class="icons">
+                        <img src="./assets/images/ContactIcons/phone-call.png" alt="Phone">
+                        <p>+91-9876543210</p>
+                       </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisasterEd-Education Modules</title>
+    <link rel="stylesheet" href="./assets/css/studentModules.css">
+<body>
+      <header>
+        <a href="index.html"><img src="assets/images/logo.jpg" alt="DisastedEd" class="logo"></a>
+        <nav class="navbar">
+            <a href="student.html" class="nav-title">Profile</a>
+            <a href="student.html" class="nav-title">Dashboard</a>
+            <!-- <a href="#" class="nav-title">Disasters</a> -->
+            <a href="#" class="nav-title">Emergency Contact</a>
+        </nav>
+       <a href="./index.html"><button class="login-button">Logout</button></a> 
+    </header>
+    <div class="student-main">
+        <div class="dashboard-container">
+         
+             <div class="dashboard-header">
+                <h1>Earthquakee Preparedness</h1>
+                <p>Number of modules: <span id="student-name"></span>2</p>
+                <p class="subtitle">Complete  all the modules to earn badges</p>
+             </div>
+
+            <!--Student progress grid-->
+             <div class="progress-grid">
+                <div class="progress-card">
+                    <img src="./assets/images/studenticons/open-book_578666.png" class="student-icon" alt="open-book">
+                    <div class="progress-content">
+                        <h3>Modules Completed</h3>
+                        <div class="progress-stats">
+                            <span class="progress-number">1/2</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+                <div class="progress-card">
+                     <img src="./assets/images/studenticons/grades.png" class="student-icon" alt="open-book">
+                    <div class="progress-content">
+                        <h3>Average Score</h3>
+                        <div class="progress-stats">
+                            <span class="progress-number">92%</span>
+                            <p class="progress-note">Excellent progress!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="progress-card">
+                    <img src="./assets/images/studenticons/circle_5967818.png" class="student-icon" alt="open-book">
+                    <div class="progress-content">
+                        <h3>Progress</h3>
+                        <div class="progress-stats">
+                            <span class="progress-number">45%</span>
+                            <p class="progress-note">Last login</p>
+                        </div>
+                    </div>
+                </div> -->
+              </div>
+              <div class="student-tabs">
+                <div class="tab-nav">
+                    <button class="tab-btn active" data-tab="modules">Modules 1</button>
+                    <button class="tab-btn " data-tab="alerts">Modules 2</button>
+                    <button class="tab-btn" data-tab="drills">Quiz</button>
+                </div>
+                <div class="tab-content">
+                    <div id="modules-tab" class="tab-pane active">
+                        <!-- <h2>Module: 1</h2> -->
+                        <div class="modules-grid" id="modules-grid">
+                            <!-- Modules will be populated by JavaScript -->/
+                             
+                        </div>      
+                    </div>
+                </div>
+             </div>    
+
+         
+</body>
+</html>
