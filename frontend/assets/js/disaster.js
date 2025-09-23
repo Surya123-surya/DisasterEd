@@ -49,7 +49,7 @@ const modules = [
     {
         title: "First Aid Basics",
         description: "Master essential first aid skills for common injuries and emergencies.",
-        image: "./assets/images/",
+        image: "./assets/images/firstAid.jpg",
         link: "#"
     }
 ];
@@ -140,28 +140,28 @@ const drills = [
     {
         title: "Earthquake Escape Room",
         description: "Navigate a virtual classroom during an earthquake. Find safe spots, avoid hazards, and make quick decisions to earn points!",
-        image: "./assets/images/drills/earthquake_drill.png",
+        image: "./assets/images/drills/earthquake-drill.jpg",
         link: "#",
         badge: "Gamified"
     },
     {
         title: "Flood Evacuation Simulator",
         description: "Simulate a flood scenario in your neighborhood. Choose the best evacuation route, pack essentials, and help others to score higher.",
-        image: "./assets/images/drills/flood_drill.png",
+        image: "./assets/images/drills/flood-drill.jpg",
         link: "#",
         badge: "Interactive"
     },
     {
         title: "Fire Safety Challenge",
         description: "Test your fire response skills! Identify fire hazards, use extinguishers, and guide classmates to safety in this timed challenge.",
-        image: "./assets/images/drills/fire_drill.png",
+        image: "./assets/images/drills/fire-drill.png",
         link: "#",
         badge: "Timed"
     },
     {
         title: "Cyclone Shelter Quest",
         description: "Race against the clock to reach a safe shelter before a cyclone hits. Make choices about supplies and routes for bonus points.",
-        image: "./assets/images/drills/cyclone_drill.png",
+        image: "./assets/images/drills/cyclone-drill.jpg",
         link: "#",
         badge: "Adventure"
     }
