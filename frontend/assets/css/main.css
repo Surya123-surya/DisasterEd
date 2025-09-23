@@ -8,7 +8,9 @@ body{
     background-color: white;
     height: 100vh;
     width: 100vw;
+    
 }
+
 /* container for header , vision , footer */
 .container {
     max-width: 1200px;
@@ -82,7 +84,7 @@ header  .login-button:hover{
 .hero {
     background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%);
     color: white;
-    padding: 120px 0 80px;
+    padding: 120px 0 80px 80px;
     text-align: center;
 }
 .hero-content h1 {
@@ -272,6 +274,7 @@ header  .login-button:hover{
     color: black;
     background-color: #f3f6f086;
 }
+
 .disaster-content{
    padding: 0 10rem;
    text-align: center;
