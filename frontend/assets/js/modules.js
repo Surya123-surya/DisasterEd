@@ -314,7 +314,7 @@ function getCorrectLabel(qname, correctValue) {
                 <div style="
                     background: #fff;
                     border-radius: 12px;
-                    max-width: 400px;
+                    max-width: 500px;
                     width: 90vw;
                     padding: 2rem 1.5rem 1.5rem 1.5rem;
                     box-shadow: 0 4px 24px rgba(0,0,0,0.18);
@@ -357,4 +357,4 @@ function getCorrectLabel(qname, correctValue) {
         function showEmergencyModal() {
             createEmergencyModal();
         }
-        window.showEmergencyModal = showEmergencyModal;
+        window.showEmergencyModal = showEmergencyModal; 
