@@ -12,7 +12,7 @@
             <a class="nav-title" href="student.html"><button  style="background: none; border: none;"onclick="scrollToProfile()">Profile</button></a>
             <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToDashboard()">Dashboard</button></a>
             <!-- <a href="#" class="nav-title">Disasters</a> -->
-            <a href="#" class="nav-title">Emergency Contact</a>
+            <a class="nav-title"><button id="emergency-btn" style="background: none; border: none;"onclick="showEmergencyModal()">Emergency Contacts</button></a>
         </nav>
        <a href="./index.html"><button class="login-button">Logout</button></a> 
     </header>
@@ -400,7 +400,7 @@
                             <div class="lesson-container">
                                 <button class="button-header">
                                     <div class="button-content">
-                                        <p class="lesson-name">Lesson 4: Global Earthquake Zones and Risk Areas</p>
+                                        <p class="lesson-name">Lesson 5: Global Earthquake Zones and Risk Areas</p>
                                         <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
                                     </div>
                                 </button>
@@ -441,7 +441,7 @@
                             <div class="lesson-container">
                                 <button class="button-header">
                                     <div class="button-content">
-                                        <p class="lesson-name">Quiz: 4</p>
+                                        <p class="lesson-name">Quiz: 5</p>
                                         <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
                                     </div>
                                 </button>
@@ -481,7 +481,7 @@
                             <div class="lesson-container">
                                 <button class="button-header">
                                     <div class="button-content">
-                                        <p class="lesson-name">Lesson 5: Earthquake Preparedness: Emergency Kits and Plans</p>
+                                        <p class="lesson-name">Lesson 6: Earthquake Preparedness: Emergency Kits and Plans</p>
                                         <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
                                     </div>
                                 </button>
@@ -680,7 +680,7 @@
                                  <div class="lesson-container">
                                 <button class="button-header">
                                     <div class="button-content">
-                                        <p class="lesson-name">Quiz: 4</p>
+                                        <p class="lesson-name">Quiz: 8</p>
                                         <img class="lesson-dropdown" src="./assets/images/lesson-dropdown.png" alt="dropdown">
                                     </div>
                                 </button>
@@ -715,23 +715,100 @@
                            </div>
                         </div> 
                          <div style="text-align:center; margin: 32px 0;">
-                            <button id="module1-submit-btn" class="quiz-submit-btn" style="padding: 12px 32px; font-size: 1.1em; background-color: #8e9c78;">Submit Module 1</button>
+                            <button id="module1-submit-btn" class="quiz-submit-btn" style="padding: 12px 32px; font-size: 1.1em; background-color: #8e9c78;">Submit Module 2</button>
                             <div id="module1-submit-feedback" style="margin-top:10px; color:#8e9c78;"></div>
                         </div>
                         
-
                     </div>
 
                     <!-- QUIZ -->
                      <div id="quiz-tab" class="tab-pane">
-                        <h3>Overall QUIZ</h3>
+                        <h3 style="text-align: center;">Overall QUIZ</h3>
                         <div class="quiz-container" id="quiz-container">
-                            <!-- Drills will be populated by JavaScript -->
+                            <form id="overall-quiz-form">
+                                <div class="quiz-question" id="oq1-container">
+                                    <p>1. What is the first step you should take when you feel an earthquake?</p>
+                                    <label><input type="radio" name="oq1" value="drop-cover-hold"> Drop, Cover, and Hold On</label>
+                                    <label><input type="radio" name="oq1" value="run-outside"> Run outside immediately</label>
+                                    <label><input type="radio" name="oq1" value="stand-window"> Stand near a window</label>
+                                    <div class="quiz-feedback" id="oq1-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq2-container">
+                                    <p>2. Which item is most important in an emergency kit?</p>
+                                    <label><input type="radio" name="oq2" value="water"> Bottled water</label>
+                                    <label><input type="radio" name="oq2" value="toys"> Toys</label>
+                                    <label><input type="radio" name="oq2" value="magazines"> Magazines</label>
+                                    <div class="quiz-feedback" id="oq2-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq3-container">
+                                    <p>3. What should you do if you see floodwaters on the road?</p>
+                                    <label><input type="radio" name="oq3" value="turn-around"> Turn around and find another route</label>
+                                    <label><input type="radio" name="oq3" value="drive-through"> Drive through quickly</label>
+                                    <label><input type="radio" name="oq3" value="walk-through"> Walk through the water</label>
+                                    <div class="quiz-feedback" id="oq3-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq4-container">
+                                    <p>4. Why is it important to have a family emergency plan?</p>
+                                    <label><input type="radio" name="oq4" value="know-what-to-do"> So everyone knows what to do in a disaster</label>
+                                    <label><input type="radio" name="oq4" value="waste-time"> It wastes time</label>
+                                    <label><input type="radio" name="oq4" value="only-adults"> Only adults need to know</label>
+                                    <div class="quiz-feedback" id="oq4-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq5-container">
+                                    <p>5. What is the safest action during a fire drill at school?</p>
+                                    <label><input type="radio" name="oq5" value="stay-calm-exit"> Stay calm and exit in an orderly manner</label>
+                                    <label><input type="radio" name="oq5" value="run-fast"> Run as fast as you can</label>
+                                    <label><input type="radio" name="oq5" value="hide"> Hide under your desk</label>
+                                    <div class="quiz-feedback" id="oq5-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq6-container">
+                                    <p>6. What should you do if you hear a cyclone warning?</p>
+                                    <label><input type="radio" name="oq6" value="seek-shelter"> Seek shelter and follow official instructions</label>
+                                    <label><input type="radio" name="oq6" value="go-outside"> Go outside to watch</label>
+                                    <label><input type="radio" name="oq6" value="ignore-warning"> Ignore the warning</label>
+                                    <div class="quiz-feedback" id="oq6-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq7-container">
+                                    <p>7. Which is a good way to help your community prepare for disasters?</p>
+                                    <label><input type="radio" name="oq7" value="share-info"> Share information and help make plans</label>
+                                    <label><input type="radio" name="oq7" value="keep-secret"> Keep plans secret</label>
+                                    <label><input type="radio" name="oq7" value="do-nothing"> Do nothing</label>
+                                    <div class="quiz-feedback" id="oq7-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq8-container">
+                                    <p>8. What is the purpose of a regional alert?</p>
+                                    <label><input type="radio" name="oq8" value="warn-people"> To warn people about possible dangers</label>
+                                    <label><input type="radio" name="oq8" value="advertise"> To advertise products</label>
+                                    <label><input type="radio" name="oq8" value="entertain"> To entertain people</label>
+                                    <div class="quiz-feedback" id="oq8-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq9-container">
+                                    <p>9. What should you do if you are trapped after a disaster?</p>
+                                    <label><input type="radio" name="oq9" value="signal-help"> Signal for help and stay calm</label>
+                                    <label><input type="radio" name="oq9" value="shout-loudly"> Shout loudly all the time</label>
+                                    <label><input type="radio" name="oq9" value="move-debris"> Try to move heavy debris alone</label>
+                                    <div class="quiz-feedback" id="oq9-feedback" style="display:none;"></div>
+                                </div>
+                                <div class="quiz-question" id="oq10-container">
+                                    <p>10. Why is teamwork important during emergencies?</p>
+                                    <label><input type="radio" name="oq10" value="work-together"> People can help each other and stay safer</label>
+                                    <label><input type="radio" name="oq10" value="selfish"> Only think about yourself</label>
+                                    <label><input type="radio" name="oq10" value="ignore-others"> Ignore others</label>
+                                    <div class="quiz-feedback" id="oq10-feedback" style="display:none;"></div>
+                                </div>
+                                <button type="button" id="overall-quiz-submit" class="quiz-submit-btn">Submit Overall Quiz</button>
+                                <div id="overall-quiz-result"></div>
+                                <div id="badge-promotion">
+                                    🎉 Congratulations! You answered all questions correctly and earned your Disaster Preparedness Badge!
+                                </div>
+                            </form>
                         </div>
-                    </div>
+                     </div>
 
                 </div>
-             </div>    
+
+            </div>
+         </div>    
 
 
 

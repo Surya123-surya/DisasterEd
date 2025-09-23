@@ -11,9 +11,10 @@
         <a href="./index.html"><img src="assets/images/logo.jpg" alt="DisastedEd" class="logo"></a>
         <nav class="navbar">
             <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToProfile()">Profile</button></a>
+            <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToDashboard()">Dashboard</button></a>
             <!-- <a href="#" class="nav-title">Dashboard</a> -->
             <!-- <a href="#" class="nav-title">Disasters</a> -->
-            <a href="#" class="nav-title">Emergency Contact</a>
+            <a class="nav-title"><button id="emergency-btn" style="background: none; border: none;"onclick="showEmergencyModal()">Emergency Contacts</button></a>
         </nav>
        <a href="./index.html"><button class="login-button">Logout</button></a> 
     </header>
@@ -28,11 +29,11 @@
              </div>
 
             <!--Student progress grid-->
-             <div class="progress-grid">
+             <div class="progress-grid" id="target-dashboard">
                 <div class="progress-card">
                     <img src="./assets/images/studenticons/open-book_578666.png" class="student-icon" alt="open-book">
                     <div class="progress-content">
-                        <h3>Modules Completed</h3>
+                        <h3>Average Modules Completed</h3>
                         <div class="progress-stats">
                             <span class="progress-number">0/15</span>
                             <div class="progress-bar">
@@ -56,7 +57,7 @@
                 <div class="progress-card">
                     <img src="./assets/images/studenticons/circle_5967818.png" class="student-icon" alt="open-book">
                     <div class="progress-content">
-                        <h3>Drills Attended</h3>
+                        <h3>Drills Conducted</h3>
                         <div class="progress-stats">
                             <span class="progress-number">0</span>
                             <p class="progress-note">0 scheduled</p>
@@ -73,7 +74,7 @@
             <div class="tab-content">
                 <!-- Students Tab -->
                 <div id="students-tab" class="tab-pane active">
-                    <h3>Student Progress Overview</h3>
+                    <h3>DASHBOARD</h3>
                     <table style="width:100%; border-collapse:collapse; margin-top:1.5rem;">
                         <thead>
                             <tr style="background:#ffa200a9;">

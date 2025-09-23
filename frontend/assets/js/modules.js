@@ -188,3 +188,173 @@
                             }
                           }
                         
+
+//Overall Quiz
+   // Correct answers for validation
+   const overallQuizAnswers = {
+    oq1: "drop-cover-hold",
+    oq2: "water",
+    oq3: "turn-around",
+    oq4: "know-what-to-do",
+    oq5: "stay-calm-exit",
+    oq6: "seek-shelter",
+    oq7: "share-info",
+    oq8: "warn-people",
+    oq9: "signal-help",
+    oq10: "work-together"
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+    const submitBtn = document.getElementById("overall-quiz-submit");
+    if (submitBtn) {
+        submitBtn.addEventListener("click", function() {
+            let allCorrect = true;
+            let total = 0;
+            let correct = 0;
+            // Hide all feedbacks
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById(`oq${i}-feedback`).style.display = "none";
+            }
+            // Validate answers
+            for (let i = 1; i <= 10; i++) {
+                total++;
+                const radios = document.getElementsByName(`oq${i}`);
+                let answered = false;
+                let value = "";
+                for (let radio of radios) {
+                    if (radio.checked) {
+                        answered = true;
+                        value = radio.value;
+                        break;
+                    }
+                }
+                const feedback = document.getElementById(`oq${i}-feedback`);
+                if (!answered) {
+                    feedback.style.display = "block";
+                    feedback.style.color = "red";
+                    feedback.textContent = "Please select an answer.";
+                    allCorrect = false;
+                } else if (value === overallQuizAnswers[`oq${i}`]) {
+                    feedback.style.display = "block";
+                    feedback.style.color = "green";
+                    feedback.textContent = "Correct!";
+                    correct++;
+                } else {
+                    feedback.style.display = "block";
+                    feedback.style.color = "red";
+                    feedback.textContent = "Incorrect. The correct answer is: " + getCorrectLabel(`oq${i}`, overallQuizAnswers[`oq${i}`]);
+                    allCorrect = false;
+                }
+            }
+            // Show result
+            const resultDiv = document.getElementById("overall-quiz-result");
+            if (correct === total) {
+                resultDiv.style.color = "#4caf50";
+                resultDiv.textContent = `All answers correct!`;
+                document.getElementById("badge-promotion").style.display = "block";
+            } else {
+                resultDiv.style.color = "#e53935";
+                resultDiv.textContent = `You got ${correct} out of ${total} correct. Please review the incorrect answers and try again.`;
+                document.getElementById("badge-promotion").style.display = "none";
+            }
+        });
+    }
+});
+
+// Helper to get the label text for the correct answer
+function getCorrectLabel(qname, correctValue) {
+    const radios = document.getElementsByName(qname);
+    for (let radio of radios) {
+        if (radio.value === correctValue) {
+            // Find the label text
+            let label = radio.parentElement;
+            if (label && label.textContent) {
+                return label.textContent.trim();
+            }
+        }
+    }
+    return "";
+}                       
+
+
+
+
+         // Emergency numbers data
+         const emergencyNumbers = [
+            { name: "National Emergency Number", number: "112" },
+            { name: "Police", number: "100" },
+            { name: "Fire", number: "101" },
+            { name: "Ambulance", number: "102" },
+            { name: "Disaster Management Services", number: "108" },
+            { name: "National Disaster Management Authority (NDMA)", number: "011-26701728" },
+            { name: "NDRF (National Disaster Response Force)", number: "011-24363260, 9711077372" },
+            { name: "Child Helpline", number: "1098" },
+            { name: "Women Helpline", number: "1091" },
+            { name: "Railway Enquiry", number: "139" }
+        ];
+
+        // Create modal HTML
+        function createEmergencyModal() {
+            if (document.getElementById('emergency-modal')) return; // Prevent duplicates
+
+            const modal = document.createElement('div');
+            modal.id = 'emergency-modal';
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100vw';
+            modal.style.height = '100vh';
+            modal.style.background = 'rgba(0,0,0,0.4)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.style.zIndex = '9999';
+
+            modal.innerHTML = `
+                <div style="
+                    background: #fff;
+                    border-radius: 12px;
+                    max-width: 400px;
+                    width: 90vw;
+                    padding: 2rem 1.5rem 1.5rem 1.5rem;
+                    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+                    position: relative;
+                    font-family: inherit;
+                ">
+                    <button id="close-emergency-modal" style="
+                        position: absolute;
+                        top: 10px;
+                        right: 14px;
+                        background: none;
+                        border: none;
+                        font-size: 1.5rem;
+                        color: #888;
+                        cursor: pointer;
+                    " title="Close">&times;</button>
+                    <h2 style="margin-top:0; color:#d35400; text-align:center;">Emergency Numbers</h2>
+                    <ul style="list-style:none; padding:0; margin:1rem 0 0 0;">
+                        ${emergencyNumbers.map(item => `
+                            <li style="margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-weight:500;">${item.name}</span>
+                                <span style="font-family:monospace; color:#2d3436;">${item.number}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            // Close modal on button click or background click
+            document.getElementById('close-emergency-modal').onclick = () => {
+                modal.remove();
+            };
+            modal.onclick = (e) => {
+                if (e.target === modal) modal.remove();
+            };
+        }
+
+        // Attach function to global scope for inline onclick
+        function showEmergencyModal() {
+            createEmergencyModal();
+        }
+        window.showEmergencyModal = showEmergencyModal;

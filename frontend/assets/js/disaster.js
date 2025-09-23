@@ -220,3 +220,85 @@ function scrollToProfile() {
   }
 
 
+
+
+
+         // Emergency numbers data
+         const emergencyNumbers = [
+            { name: "National Emergency Number", number: "112" },
+            { name: "Police", number: "100" },
+            { name: "Fire", number: "101" },
+            { name: "Ambulance", number: "102" },
+            { name: "Disaster Management Services", number: "108" },
+            { name: "National Disaster Management Authority (NDMA)", number: "011-26701728" },
+            { name: "NDRF (National Disaster Response Force)", number: "011-24363260, 9711077372" },
+            { name: "Child Helpline", number: "1098" },
+            { name: "Women Helpline", number: "1091" },
+            { name: "Railway Enquiry", number: "139" }
+        ];
+
+        // Create modal HTML
+        function createEmergencyModal() {
+            if (document.getElementById('emergency-modal')) return; // Prevent duplicates
+
+            const modal = document.createElement('div');
+            modal.id = 'emergency-modal';
+            modal.style.position = 'fixed';
+            modal.style.top = '0';
+            modal.style.left = '0';
+            modal.style.width = '100vw';
+            modal.style.height = '100vh';
+            modal.style.background = 'rgba(0,0,0,0.4)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.style.zIndex = '9999';
+
+            modal.innerHTML = `
+                <div style="
+                    background: #fff;
+                    border-radius: 12px;
+                    max-width: 400px;
+                    width: 90vw;
+                    padding: 2rem 1.5rem 1.5rem 1.5rem;
+                    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+                    position: relative;
+                    font-family: inherit;
+                ">
+                    <button id="close-emergency-modal" style="
+                        position: absolute;
+                        top: 10px;
+                        right: 14px;
+                        background: none;
+                        border: none;
+                        font-size: 1.5rem;
+                        color: #888;
+                        cursor: pointer;
+                    " title="Close">&times;</button>
+                    <h2 style="margin-top:0; color:#d35400; text-align:center;">Emergency Numbers</h2>
+                    <ul style="list-style:none; padding:0; margin:1rem 0 0 0;">
+                        ${emergencyNumbers.map(item => `
+                            <li style="margin-bottom:1rem; display:flex; justify-content:space-between; align-items:center;">
+                                <span style="font-weight:500;">${item.name}</span>
+                                <span style="font-family:monospace; color:#2d3436;">${item.number}</span>
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            // Close modal on button click or background click
+            document.getElementById('close-emergency-modal').onclick = () => {
+                modal.remove();
+            };
+            modal.onclick = (e) => {
+                if (e.target === modal) modal.remove();
+            };
+        }
+
+        // Attach function to global scope for inline onclick
+        function showEmergencyModal() {
+            createEmergencyModal();
+        }
+        window.showEmergencyModal = showEmergencyModal;
