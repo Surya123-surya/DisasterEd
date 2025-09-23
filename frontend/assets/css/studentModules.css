@@ -297,7 +297,7 @@ header  .login-button:hover{
     color: #1e293b;
 }
 .lesson-content p, .lesson-content ul{
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .lesson-image{
     max-width: 50%;
@@ -313,21 +313,23 @@ header  .login-button:hover{
     /* margin-bottom: 20px; */
 }
 .img-content p{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #374456;
     margin-bottom: 10px;
 }
+
+
 @media screen and (max-width: 768px) {
     .img-content{
         flex-direction: column;
         text-align: center;
     }
+   .lesson-content p , .lesson-content ul{
+        font-size: 0.5rem;
+    }
     .lesson-image{
         max-width: 100%;
         width: 100%;
-    }
-    .lesson-content p, .lesson-content ul{
-        font-size: 0.5rem;
     }
 }
 
