@@ -6,11 +6,11 @@
     <title>DisasterEd-Education Modules</title>
     <link rel="stylesheet" href="./assets/css/studentModules.css">
 <body>
-      <header>
+      <header id="target-profile">
         <a href="index.html"><img src="assets/images/logo.jpg" alt="DisastedEd" class="logo"></a>
         <nav class="navbar">
-            <a href="./student.html" class="nav-title">Profile</a>
-            <a href="./student.html" class="nav-title">Dashboard</a>
+            <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToProfile()">Profile</button></a>
+            <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToDashboard()">Dashboard</button></a>
             <!-- <a href="#" class="nav-title">Disasters</a> -->
             <a href="#" class="nav-title">Emergency Contact</a>
         </nav>
@@ -26,7 +26,7 @@
              </div>
 
             <!--Student progress grid-->
-             <div class="progress-grid">
+             <div class="progress-grid" id="target-dashboard">
                 <div class="progress-card">
                     <img src="./assets/images/studenticons/open-book_578666.png" class="student-icon" alt="open-book">
                     <div class="progress-content">

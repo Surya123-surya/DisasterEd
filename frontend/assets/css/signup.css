@@ -14,7 +14,7 @@ body{
     background-repeat:no-repeat;
     background-size:contain;
    background-position-x:center;
-   backdrop-filter: blur(4px);
+   /* backdrop-filter: blur(2px); */
 }
 
 section {
@@ -51,14 +51,14 @@ section::after{
 .container {
     max-width: 350px;
     margin: 70px auto;
-    background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%);
+    /* background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%); */
     border-radius: 24px;
     padding: 25px 30px;
     position: relative;
     z-index: 100;
     text-align: center;
     box-shadow: 5px 25px 45px 25px rgba(0,0,0,0.5);
-
+    backdrop-filter: blur(6px);
 }
 .user{
     width: 90%;
@@ -72,13 +72,13 @@ section::after{
 }
 h2 {
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #8e9c78;
     font-weight: 600;
 }
 
 
 p {
-    color: #fff;
+    color: #8e9c78;
     margin-bottom: 20px;
     font-size: 1rem;
 }
@@ -93,7 +93,9 @@ input {
     font-size: 1rem;
     color: #8e9c78;
 }
-
+label{
+    display: none;
+}
 
 button[type="submit"] {
     margin-top: 15px;

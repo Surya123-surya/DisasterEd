@@ -167,3 +167,24 @@
                         });
 
  
+
+                        function scrollToProfile() {
+                            const targetElement = document.getElementById('target-profile');
+                            if (targetElement) {
+                              targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                              });
+                            }
+                          }
+                        
+                        function scrollToDashboard() {
+                            const targetElement = document.getElementById('target-dashboard');
+                            if (targetElement) {
+                              targetElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                              });
+                            }
+                          }
+                        

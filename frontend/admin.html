@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DsasterEd-StudentPortal</title>
-    <link rel="stylesheet" href="./assets/css/student.css">
-    
+    <title>DisasterEd-Admin</title>
+    <link rel="stylesheet" href="./assets/css/admin.css">
 </head>
 <body>
     <header id="target-profile">
@@ -19,13 +18,13 @@
        <a href="./index.html"><button class="login-button">Logout</button></a> 
     </header>
 
-    <div class="student-main">
+    <div class="admin-main">
         <div class="dashboard-container">
          
              <div class="dashboard-header">
-                <h1>Hello, Surya</h1>
-                <p>Welcome back, <span id="student-name"></span>!</p>
-                <p class="subtitle">Continue your disaster preparedness journey</p>
+                <h1>Hello, Adminstrator</h1>
+                <p>Welcome back, <span id="admin-name"></span>!</p>
+                <p class="subtitle">Check the progress of your students</p>
              </div>
 
             <!--Student progress grid-->
@@ -33,7 +32,7 @@
                 <div class="progress-card">
                     <img src="./assets/images/studenticons/open-book_578666.png" class="student-icon" alt="open-book">
                     <div class="progress-content">
-                        <h3>Total Modules Completed</h3>
+                        <h3>Modules Completed</h3>
                         <div class="progress-stats">
                             <span class="progress-number">0/15</span>
                             <div class="progress-bar">
@@ -46,7 +45,7 @@
                 <div class="progress-card">
                      <img src="./assets/images/studenticons/grades.png" class="student-icon" alt="open-book">
                     <div class="progress-content">
-                        <h3>Overall Average Score</h3>
+                        <h3>Average Score</h3>
                         <div class="progress-stats">
                             <span class="progress-number">0%</span>
                             <p class="progress-note">No progress!</p>
@@ -65,47 +64,39 @@
                     </div>
                 </div>
               </div>
-           
-            <!--Student tab-->
-            
-            <div class="student-tabs">
-                <div class="tab-nav">
-                    <button class="tab-btn active" data-tab="modules">Education Modules</button>
-                    <button class="tab-btn " data-tab="alerts">Regional Alerts</button>
-                    <button class="tab-btn" data-tab="drills">Virtual Drills</button>
-                </div>
-                
-                <div class="tab-content">
-                    <!-- Modules Tab -->
-                    <div id="modules-tab" class="tab-pane active">
-                        <h3>Interactive Learning Modules</h3>
-                        <div class="modules-grid" id="modules-grid">
-                            <!-- Modules will be populated by JavaScript -->
-                        </div>
-                    </div>
-                    
-                    <!-- Alerts Tab -->
-                    <div id="alerts-tab" class="tab-pane">
-                        <h3>Region-Specific Alerts</h3>
-                        <div class="alerts-container" id="alerts-container">
-                            <!-- Alerts will be populated by JavaScript -->
-                        </div>
-                    </div>
-                    
-                    <!-- Drills Tab -->
-                    <div id="drills-tab" class="tab-pane">
-                        <h3>Virtual Emergency Drills</h3>
-                        <div class="drills-container" id="drills-container">
-                            <!-- Drills will be populated by JavaScript -->
-                        </div>
-                    </div>
-                </div>  
-          
+              <!-- admin tab -->
+        <div class="admin-tabs">
+            <div class="tab-nav">
+
+
             </div>
-        
-        
+            <div class="tab-content">
+                <!-- Students Tab -->
+                <div id="students-tab" class="tab-pane active">
+                    <h3>Student Progress Overview</h3>
+                    <table style="width:100%; border-collapse:collapse; margin-top:1.5rem;">
+                        <thead>
+                            <tr style="background:#ffa200a9;">
+                                <th style="padding:0.75rem; text-align:left;">Roll No</th>
+                                <th style="padding:0.75rem; text-align:left;">Name</th>
+                                <th style="padding:0.75rem; text-align:left;">Modules Completed</th>
+                                <th style="padding:0.75rem; text-align:left;">Avg Score</th>
+                                <th style="padding:0.75rem; text-align:left;">Badge</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-list-body">
+                            <!-- Student rows will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
+    
+
+        </div>   
     </div>
-<script src="./assets/js/disaster.js"></script>
+
+
+    <script src="./assets/js/admin.js"></script>
 </body>
 </html>

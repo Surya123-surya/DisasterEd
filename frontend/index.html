@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-    <header>
+    <header id="target-home">
         <a href="index.html"><img src="assets/images/logo.jpg" alt="DisastedEd" class="logo"></a>
         <nav class="navbar">
-            <a href="index.html" class="nav-title">Home</a>
-            <a href="#" class="nav-title">About us</a>
-            <a href="#" class="nav-title">Disasters</a>
-            <a href="#" class="nav-title">Contact us</a>
+            <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToHome()">Home</button></a>
+            <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToAboutus()">About us</button></a>
+            <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToDisaster()">Disasters</button></a>
+            <a class="nav-title"><button  style="background: none; border: none;"onclick="scrollToContactus()">Contact us</button></a>
+           
         </nav>
        <a href="./login.html"><button class="login-button">Login/SignUp</button></a> 
+       
     </header>
 
     <div class="main-content">
@@ -47,12 +49,12 @@
                         <img  id="vision-img4" class="vision-img" src="assets/images/vision-image4.png" alt="Vision">
                     </div>
                 </div> -->
-                <div class="vision-image-contianer">
+                <div class="vision-image-contianer" id="target-aboutus">
                     <img src="./assets/images/Our Vision.png" alt="vision" class="vision-image">
                 </div>
             </section>
             <!--Disaster Section-->
-            <section class="disaster">
+            <section class="disaster" id="target-disaster">
                <div class="disaster-container">
                    <div class="disaster-header">
                        <h2>Major Disasters that may occur</h2>
@@ -106,7 +108,7 @@
             </section>
             <!--Contact section-->
             <footer>
-                <div class="contact-us">
+                <div class="contact-us" id="target-contactus">
                     <h3>Contact-us</h3>
                     <div class="icons-section">
                        <div class="icons">

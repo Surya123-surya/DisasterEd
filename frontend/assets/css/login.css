@@ -15,6 +15,7 @@ body{
    background-position-x:center;
    backdrop-filter: blur(4px);
    */
+ 
 } 
 
 section {
@@ -27,6 +28,7 @@ section {
     align-items: center;
     color: white;
     perspective: 1000px;
+    
 }
 
 section::before{
@@ -51,18 +53,19 @@ section::after{
 .container {
     max-width: 350px;
     margin: 70px auto;
-    background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%);
+    /* background: linear-gradient(135deg, #3d482c 0%, #8e9c78 100%); */
     border-radius: 24px;
     padding: 25px 30px;
     position: relative;
     z-index: 100;
     text-align: center;
     box-shadow: 5px 25px 45px 25px rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
 }
 .user{
     width: 90%;
     padding: 10px;
-    margin: 8px 0;
+    margin: 1rem 0;
     border: 1px solid #8e9c78;
     border-radius: 10px;
     background: #ffffff;
@@ -72,19 +75,22 @@ section::after{
 
 h2 {
     margin-bottom: 10px;
-    color: #ffffff;
+    color: #8e9c78;
     font-weight: 600;
 }
 
 p {
-    color: #fff;
+    color: #8e9c78;
     margin-bottom: 20px;
+}
+label{
+    display: none;
 }
 
 input[type="text"], input[type="password"] {
     width: 90%;
     padding: 10px;
-    margin: 8px 0;
+    margin: 1rem 0 0 0;
     border: 1px solid #8e9c78;
     border-radius: 10px;
     background: #ffffff;

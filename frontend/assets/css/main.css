@@ -55,6 +55,10 @@ header .navbar .nav-title{
     font-family: 'Poppins', sans-serif;
    
 }
+header .navbar .nav-title button{
+    font-size: 1rem;
+    font-weight: 600;
+}
 header .navbar .nav-title:hover{
     transform: scale(1.05);
     padding: 10px;
@@ -161,9 +165,7 @@ header  .login-button:hover{
     width: 100%;
 }
 /* Vision Section */
-.vision {
-    padding: 80px 0;
-}
+
 /*
 .vision-container{
     width: auto;
@@ -232,9 +234,10 @@ header  .login-button:hover{
  */
  .vision-image-contianer{
     text-align: center;
+    padding-top: 70px;
  }
 .vision-image{
-   width: 60%;
+   width: 50%;
 }
 /*Disaster Section*/
 .disaster {
@@ -262,9 +265,13 @@ header  .login-button:hover{
 }
 .disaster-box{
     width: 70%;
-    height: 10rem;
+    /* height: 10rem; */
+  
     display: flex;
-    align-items:center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
     /* justify-content: space-between; */
     padding: 10px;
     background-color: transparent;
@@ -273,6 +280,20 @@ header  .login-button:hover{
     transition: all 0.5s ease;
     color: black;
     background-color: #f3f6f086;
+}
+
+@media (max-width: 1100px) {
+    .disaster-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .disaster-content {
+        padding: 0 2rem;
+    }
+    .disaster-box img {
+        margin-left: 0;
+    }
 }
 
 .disaster-content{

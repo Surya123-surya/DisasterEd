@@ -60,6 +60,10 @@ header .navbar .nav-title:hover{
 header .navbar .nav-title:hover{
    color: rgba(0,0,0,0.5);
 }
+header .navbar .nav-title button{
+    font-size: 1rem;
+    font-weight: 600;
+}
 header .login-button{
     width: 130px;
     color: white;
@@ -95,7 +99,7 @@ header  .login-button:hover{
 
 .dashboard-header {
    /* width: 100%; */
-   padding: 2rem;
+   padding: 2%;
     margin-bottom: 2rem;
     background-color: #8e9c78;
     border-radius: 1.5rem;
@@ -121,7 +125,7 @@ header  .login-button:hover{
 /*progress grid*/
 .progress-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -199,7 +203,7 @@ header  .login-button:hover{
 }
 
 .tab-btn {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     border: none;
     background: none;
     font-size: 0.875rem;
@@ -242,7 +246,7 @@ header  .login-button:hover{
 
 .modules-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
 }
 .module-card {
