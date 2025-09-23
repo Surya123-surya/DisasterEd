@@ -290,6 +290,7 @@ header  .login-button:hover{
     padding: 1rem 1.5rem;
     display: none;
     background-color: #f9fafb;
+    font-size: 1rem;
 }
 .lesson-content h2{
     margin-bottom: 1rem;
@@ -314,6 +315,7 @@ header  .login-button:hover{
 .img-content p{
     font-size: 1.2rem;
     color: #374456;
+    margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
     .img-content{
@@ -323,6 +325,9 @@ header  .login-button:hover{
     .lesson-image{
         max-width: 100%;
         width: 100%;
+    }
+    .lesson-content p, .lesson-content ul{
+        font-size: 0.5rem;
     }
 }
 
